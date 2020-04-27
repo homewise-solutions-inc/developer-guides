@@ -7,6 +7,9 @@ Select a guide from the index below.
 ## Homewise for Advisors
 - [Embed Mortgage Application](./homewise-advisors/embed.md).
 
+## Homewise for Partners
+- [Embed Mortgage Application](./homewise-partners/embed.md).
+
 ## Support
 Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via 
 email or on GitHub.

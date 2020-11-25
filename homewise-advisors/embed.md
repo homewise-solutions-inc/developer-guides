@@ -10,28 +10,31 @@ Go to [https://homewiseadvisors.com/](https://homewiseadvisors.com/) and apply t
 If you are having trouble registering, please Contact us at *hello[at]thinkhomewise.com*.
 
 ### Step 2
-Once you are approved, get the code from your dashboard.
+1. Log into your advisor dashboard.
+2. Copy the partner code provided to you (this will be use as `{advisor_code}` at Step 3)
 
 ### Step 3
 #### Method 1
-Paste the following code with ***correct values*** where you want the embed to appear.
+Paste the following code with **correct values** where you want the embed to appear.
 
 <pre>
 <iframe id="homewise" src="https://my.thinkhomewise.com/advisor/<b>{advisor_code}</b>/embed" frameborder="0" border="0"></iframe>
 </pre>
 
 #### Method 2 (Recommended)
-Follow method 1 above along with [iFrameResizer](http://davidjbradshaw.github.io/iframe-resizer/) to dynamically resize 
-the `<iframe/>` height based on content. Homewise tested this combination for proper functionality.
-
-Paste the following code with ***correct values*** where you want the embed to appear.
+1. Download [iFrameResizer](../files/iframeSizer.min.js.zip).
+2. Unzip it and upload `iframeSizer.min.js` file to your web server.
+3. Paste the following code with **correct values** (file path & advisor code) where you want the embed to appear.
 
 <pre>
-<script src="<b>https://example.com/path/to/</b>iframeResizer.min.js"></script>
+<script src="https://yourdomain.com/path/to/iframeResizer.min.js"></script>
 <style>iframe { width: 1px; min-width: 100%; }</style>
-<iframe id="homewise" src="https://my.thinkhomewise.com/advisor/<b>{advisor_code}</b>/embed" frameborder="0" border="0"></iframe>
+<iframe id="homewise" src="https://my.thinkhomewise.com/advisor/{advisor_code}/embed" frameborder="0" border="0"></iframe>
 <script>iFrameResize({ heightCalculationMethod: 'max', resizeFrom: 'child' }, '#homewise');</script>
 </pre>
+
+Note: [iFrameResizer](https://github.com/davidjbradshaw/iframe-resizer) is used to dynamically resize 
+the `<iframe/>` height based on content. Homewise tested this combination for proper functionality. 
    
 ## Support
 Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via 

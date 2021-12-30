@@ -1,0 +1,82 @@
+# Homewise Partner Configuration for Embeds
+This documentation covers the steps you should take before embedding any Homewise widgets that are publicly available.
+Thank you for interest with Homewise!
+
+## Installation
+Following steps covers how to add the Homewise partner configuration to your website. Please note that for this process 
+you will need help from a web developer.
+
+### Step 1
+Contact Homewise at *hello[at]thinkhomewise.com* to work out your partnership contract. We recommend and love to talk
+with you to understand the partnership better.
+
+Now, based on your business type, register at one of our partner portals below to get your partner code which is 
+available on partner dashboard.
+- Homewise for Advisors: [https://homewiseadvisors.com](https://homewiseadvisors.com/) - applies to following businesses:
+  - Financial Advisor
+  - Financial Planner
+  - Insurance Advisor
+  - Investment Advisor
+  - Personal Banker
+  - Other (any industry closely related to above categories)
+- Homewise for Partners: [https://homewisepartners.com](https://homewisepartners.com/) - applies to following businesses:
+  - Professional Services
+  - Technology/Startup
+  - Real Estate Development
+  - Insurance
+  - Other (any industry closely related to above categories)
+- Homewise for Realtors: [https://homewiserealtors.ca](https://homewiserealtors.ca) - applies to following businesses:
+  - Residential Resale
+  - Residential Pre-Construction
+  - Commercial
+  - Other (any industry closely related to above categories)
+
+Are you a blogger? a news site? or simply having trouble deciding which partner portal to register on? Contact Homewise
+at *hello[at]thinkhomewise.com*. We can help you.
+
+### Step 2
+1. Log into your partner dashboard.
+2. Copy the partner code.
+
+### Step 3
+Paste the following code somewhere near top of the page. Right before `</head>` tag or right after `<body>` tag is 
+recommended. Fill it with correct values. This adds Homewise default configuration matching your unique partner details.
+
+> :warning: Completing this step with correct values is crucial. Please refer to browser's console for errors.
+
+```
+<script>
+  var homewise = {
+    partner: {
+      type: <string>
+      code: <string>
+    }
+  };
+</script>
+```
+
+#### Reference
+| Property | Required | Accepted Values | Default | Notes                                           |
+|----------|:--------:|-----------------|---------|-------------------------------------------------|
+| `type`   |    Y     | `p`,`a`,`r`     | `null`  | `p` = Partner<br>`a` = Advisor<br>`r` = Realtor |
+| `code`   |    Y     | -               | `null`  | Copied partner code from dashboard.             |
+
+#### Example
+```
+<script>
+  var homewise = {
+    partner: {
+      type: "p"
+      code: "abc123"
+    }
+  };
+</script>
+```
+
+## Support
+Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via
+email or on GitHub.
+
+**© Homewise Solutions Inc. All rights reserved.**
+
+[Privacy Policy](https://thinkhomewise.com/page/privacy/) | [Terms of Agreement](https://thinkhomewise.com/page/terms/).

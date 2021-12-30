@@ -44,11 +44,11 @@ recommended. Fill it with correct values. This adds Homewise default configurati
 
 > :warning: Completing this step with correct values is crucial. Please refer to browser's console for errors.
 
-```
+```html
 <script>
   var homewise = {
     partner: {
-      type: <string>
+      type: <string>,
       code: <string>
     }
   };
@@ -62,11 +62,11 @@ recommended. Fill it with correct values. This adds Homewise default configurati
 | `code`   |    Y     | -               | `null`  | Copied partner code from dashboard.             |
 
 #### Example
-```
+```html
 <script>
   var homewise = {
     partner: {
-      type: "p"
+      type: "p",
       code: "abc123"
     }
   };

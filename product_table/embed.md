@@ -11,16 +11,16 @@ Complete [partner configuration](../partner/configuration.md).
 ### Step 2
 Paste following line right after the `homewise` object. This loads the product table embed script.
 
-```
+```html
 <script src="https://widgets.thinkhomewise.com/com-product-table/1.0/embed.js"></script>
 ```
 
 #### Example
-```
+```html
 <script>
   var homewise = {
     partner: {
-      type: "p"
+      type: "p",
       code: "abc123"
     }
   };
@@ -34,12 +34,12 @@ of embed script by changing the version number (e.g `/1.0/embed.js`). Following 
 
 | Version | Notes                                   |
 |:-------:|-----------------------------------------|
-|   1.0   | First version with all launch features. |
+| **1.0** | First version with all launch features. |
 
 
 ### Step 3
 Paste following code where you want the Homewise product table to appear.
-```
+```html
 <div class="homewise_product_table"></div>
 ```
 
@@ -47,7 +47,7 @@ Paste following code where you want the Homewise product table to appear.
 Optionally, customize the product table by adding `productTable` configuration object to the `homewise` default object.
 > :warning: Please refer to browser's console for errors.
 
-```
+```html
 <script>
   var homewise = {
     partner: { ... },
@@ -74,11 +74,11 @@ Optionally, customize the product table by adding `productTable` configuration o
 
 
 #### Example
-```
+```html
 <script>
   var homewise = {
     partner: {
-      type: "p"
+      type: "p",
       code: "abc123"
     },
     productTable: {

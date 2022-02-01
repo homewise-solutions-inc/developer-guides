@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the product table embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
 ```
 
 #### Example
@@ -25,7 +25,7 @@ Paste following line right after the `homewise` object. This loads the product t
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
 ```
 
 #### Versions
@@ -91,7 +91,7 @@ Optionally, customize the product table by adding `productTable` configuration o
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
 ```
 
 ## Support

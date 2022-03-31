@@ -57,11 +57,11 @@ recommended. Fill it with correct values. This adds Homewise default configurati
 ```
 
 #### Reference
-| Property   | Required | Accepted Values                | Default  |
-|------------|:--------:|--------------------------------|----------|
-| `type`     |    Y     | `p`,`a`,`r`                    | `null`   |
-| `code`     |    Y     | `a-z`, `A-Z`, `0-9`, `-`, `_`  | `null`   |
-| `segment`  |    N     | `a-z`, `A-Z`, `0-9`, `-`, `_`  | `null`   |
+| Property   | Required | Accepted Values               | Default  |
+|------------|:--------:|-------------------------------|----------|
+| `type`     |    Y     | `p`, `a`, `r`                 | `null`   |
+| `code`     |    Y     | `a-z`, `A-Z`, `0-9`, `-`, `_` | `null`   |
+| `segment`  |    N     | `a-z`, `A-Z`, `0-9`, `-`, `_` | `null`   |
 
 ##### Notes
 * `type` - Your partner type. Partner (`p`), Advisor (`a`) or Realtor (`r`).

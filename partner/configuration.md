@@ -49,17 +49,26 @@ recommended. Fill it with correct values. This adds Homewise default configurati
   var homewise = {
     partner: {
       type: <string>,
-      code: <string>
+      code: <string>,
+      segment: <string>
     }
   };
 </script>
 ```
 
 #### Reference
-| Property | Required | Accepted Values | Default | Notes                                           |
-|----------|:--------:|-----------------|---------|-------------------------------------------------|
-| `type`   |    Y     | `p`,`a`,`r`     | `null`  | `p` = Partner<br>`a` = Advisor<br>`r` = Realtor |
-| `code`   |    Y     | -               | `null`  | Copied partner code from dashboard.             |
+| Property   | Required | Accepted Values                | Default  |
+|------------|:--------:|--------------------------------|----------|
+| `type`     |    Y     | `p`,`a`,`r`                    | `null`   |
+| `code`     |    Y     | `a-z`, `A-Z`, `0-9`, `-`, `_`  | `null`   |
+| `segment`  |    N     | `a-z`, `A-Z`, `0-9`, `-`, `_`  | `null`   |
+
+##### Notes
+* `type` - Your partner type. Partner (`p`), Advisor (`a`) or Realtor (`r`).
+* `code` - Partner code copied from your partner dashboard _or_ a code Homewise generated for you.
+* `segment` - Value to associate with the collected mortgage application. Visible in the dashboard (or custom reports). 
+  * _E.g. You built 2 pages with Homewise app embedded. One page is for Ontario and one page is for Alberta. You can use
+    `ontario` and `alberta` as segment values. This will allow us segment apps differently in reports._
 
 #### Example
 ```html
@@ -67,7 +76,8 @@ recommended. Fill it with correct values. This adds Homewise default configurati
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123"
+      code: "abc123",
+      segment: "xyz789"
     }
   };
 </script>

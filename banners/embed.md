@@ -1,7 +1,7 @@
 # Embed Homewise Banners
 Thank you for partnering with Homewise!
 
-This guide covers the steps to embed Homewise banners into your website. These widgets can be used throughout out your
+This guide covers the steps to embed Homewise banners into your website. These widgets can be used throughout your
 website to act as drivers to Homewise Online Application proper or a custom page that you maintain with a Homewise
 Application embed.
 
@@ -11,7 +11,7 @@ Application embed.
 Complete [partner configuration](../partner/configuration.md).
 
 ### Step 2
-Paste following line right after the `homewise` object. This loads the product table embed script.
+Paste following line right after the `homewise` object. This loads the banner embed script.
 
 ```html
 <script src="https://widgets.thinkhomewise.com/lib/com-banner/1.0/embed.js"></script>
@@ -41,13 +41,13 @@ of embed script by changing the version number (e.g `/1.0/embed.js`). Following 
 
 
 ### Step 3
-Paste following code where you want the Homewise product table to appear.
+Paste following code where you want the Homewise banner to appear.
 ```html
 <div class="homewise_banner"></div>
 ```
 
 ### Step 4 - Optional
-Optionally, customize the product table by adding `banner` configuration object to the `homewise` default object.
+Optionally, customize the banner by adding `banner` configuration object to the `homewise` default object.
 > :warning: Please refer to browser's console for errors.
 
 ```html
@@ -78,8 +78,8 @@ Optionally, customize the product table by adding `banner` configuration object 
 
 ##### Notes
 * `style` - Set the banner style you want. See below for a preview.
-  * **Homewise 1** ![Homewise 3](./homewise_1.png)
-  * **Homewise 2** ![Homewise 3](./homewise_2.png)
+  * **Homewise 1** ![Homewise 1](./homewise_1.png)
+  * **Homewise 2** ![Homewise 2](./homewise_2.png)
   * **Homewise 3** ![Homewise 3](./homewise_3.png)
 * `primaryColor` - Sets colors for buttons, borders and a calculated shade for the content area.
 * `font` - Toggle standard font load. `false` will allow you to apply the font used your website's CSS.
@@ -105,7 +105,7 @@ Optionally, customize the product table by adding `banner` configuration object 
       code: "abc123",
       segment: "xyz789"
     },
-    productTable: {
+    banner: {
       bg: "#fff7ed",
       primaryColor: "#ff824d",
       font: false,

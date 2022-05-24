@@ -25,12 +25,12 @@ where you want the embed to appear.
 > :warning: If you are using `{segment}` in the URL, please reformat it to match `https://my.thinkhomewise.com/p/{partner_code}/{segment}/embed` format.
 
 #### Method 2
-1. Download [iFrameResizer](../files/iframeSizer.min.js.zip).
+1. Download [iFrameSizer](../files/iframeSizer.min.js.zip).
 2. Unzip it and upload `iframeSizer.min.js` file to your web server.
 3. Paste the following code with **correct values** (file path & partner code) where you want the embed to appear.
 
 ```
-<script src="https://yourdomain.com/path/to/iframeResizer.min.js"></script>
+<script src="https://yourdomain.com/path/to/iframeSizer.min.js"></script>
 <style>iframe { width: 1px; min-width: 100%; }</style>
 <iframe id="homewise" src="https://my.thinkhomewise.com/p/{partner_code}/embed" frameborder="0" border="0"></iframe>
 <script>iFrameResize({ heightCalculationMethod: 'max', resizeFrom: 'child' }, '#homewise');</script>
@@ -38,7 +38,7 @@ where you want the embed to appear.
 
 > :warning: If you are using `{segment}` in the URL, please reformat it to match `https://my.thinkhomewise.com/p/{partner_code}/{segment}/embed` format.
 
-Note: [iFrameResizer](https://github.com/davidjbradshaw/iframe-resizer) is used to dynamically resize 
+Note: [iFrameSizer](https://github.com/davidjbradshaw/iframe-resizer) is used to dynamically resize 
 the `<iframe/>` height based on content. Homewise tested this combination for proper functionality.
 
 #### Reference

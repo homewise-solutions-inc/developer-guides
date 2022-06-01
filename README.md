@@ -1,8 +1,13 @@
 # Homewise Public Developer Guides
 Welcome to Homewise Developer Guides repository. If you are using any publicly available technology assets from Homewise,
-use this repository to find the correct developer guide to understand how to implement/integrate in to your online properties. 
+use this repository to find the correct developer guide to understand how to implement/integrate in to your online 
+properties. 
 
 Select a guide from the index below.
+
+- [Partner Configuration](./partner/configuration.md).
+- [Product Table](./mortgage_payment_calculator/embed.md).
+- [Banners](./banners/embed.md).
 
 ## Homewise for Advisors
 - [Embed Mortgage Application](./homewise-advisors/embed.md).
@@ -19,4 +24,4 @@ email or on GitHub.
 
 **© Homewise Solutions Inc. All rights reserved.**
 
-[Privacy Policy](https://thinkhomewise.com/page/privacy) | [Terms of Agreement](https://thinkhomewise.com/page/terms).
+[Privacy Policy](https://thinkhomewise.com/page/privacy/) | [Terms of Agreement](https://thinkhomewise.com/page/terms/).

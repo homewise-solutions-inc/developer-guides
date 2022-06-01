@@ -50,7 +50,7 @@ array (see step 4 below). E.g. If 3 banners were configured, then the targets wi
 ```
 
 
-### Step 4 - Optional
+### Step 4
 Optionally, customize the banner by adding `banner` configuration object with a single or multiple banner customization
 configurations to the `homewise` default object.
 > :warning: Please refer to browser's console for errors.
@@ -82,6 +82,9 @@ configurations to the `homewise` default object.
 | `body`         |    N     | Valid HTML wrapped with a `<p></p>` tag. | *Visible after embedding*      |
 | `cta`          |    N     | Any string.                              | `See Your Mortgage Options`    |
 | `link`         |    N     | Any URL.                                 | `https://my.thinkhomewise.com` |
+
+> :bulb: Configure banners array with empty objects to render banner(s) using default values. E.g. 
+> `homewise.banner = [{},{},{}]`
 
 ##### Notes
 * `style` - Set the banner style you want. See below for a preview.

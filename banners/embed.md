@@ -14,7 +14,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the banner embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.1/embed.js"></script>
 ```
 
 #### Example
@@ -28,40 +28,47 @@ Paste following line right after the `homewise` object. This loads the banner em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.1/embed.js"></script>
 ```
 
 #### Versions
 Homewise will versions time to time introducing new features and bug fixes. We recommend that you use the latest version 
-of embed script by changing the version number (e.g `/1.0/embed.js`). Following table shows available versions.
+of embed script by changing the version number (e.g `/1.1/embed.js`). Following table shows available versions.
 
-| Version | Notes                                                                    |
-|:-------:|--------------------------------------------------------------------------|
-| **1.0** | First version with all launch features.                                  |
-
+|            Version            | Notes                                       |
+|:-----------------------------:|---------------------------------------------|
+|              1.1              | Supports multiple banners on the same page. |
+| [1.0](./archive/embed_1_0.md) | First version with all launch features.     |
 
 ### Step 3
-Paste following code where you want the Homewise banner to appear.
+Use following target class naming format where `N` is the position (index) of the configuration in the configuration 
+array (see step 4 below). E.g. If 3 banners were configured, then the targets will be `homewise_banner_0`, 
+`homewise_banner_1` and `homewise_banner_2`.
 ```html
-<div class="homewise_banner"></div>
+<div class="homewise_banner_N"></div>
+<!-- e.g. <div class="homewise_banner_0"></div>, <div class="homewise_banner_1"></div> -->
 ```
 
+
 ### Step 4 - Optional
-Optionally, customize the banner by adding `banner` configuration object to the `homewise` default object.
+Optionally, customize the banner by adding `banner` configuration object with a single or multiple banner customization
+configurations to the `homewise` default object.
 > :warning: Please refer to browser's console for errors.
 
 ```html
 <script>
   var homewise = {
     partner: { ... },
-    banner: {
-      style: <string>,
-      primaryColor: <string>,
-      font: <boolean>,
-      body: <boolean>,
-      cta: <string>,
-      link: <string>
-    }
+    banner: [
+      {
+        style: <string>,
+        primaryColor: <string>,
+        font: <boolean>,
+        body: <boolean>,
+        cta: <string>,
+        link: <string>
+      }
+   ]
   };
 </script>
 ```
@@ -105,17 +112,27 @@ Optionally, customize the banner by adding `banner` configuration object to the 
       code: "abc123",
       segment: "xyz789"
     },
-    banner: {
-      bg: "#fff7ed",
-      primaryColor: "#ff824d",
-      font: false,
-      body: "<p>Connect with Homewise for a better mortgage!</p>",
-      cta: "Learn More",
-      link: "https://domain.com/page?foo=123&bar=456"
-    }
+    banner: [
+      {
+        style: "homewise_1",
+        primaryColor: "#ff824d",
+        font: false,
+        body: "<p>Connect with Homewise for a better mortgage!</p>",
+        cta: "Learn More",
+        link: "https://domain.com/page?foo=123&bar=456"
+      },
+      {
+        style: "homewise_3",
+        primaryColor: "#ff824d",
+        font: false,
+        body: "<p>Connect with Homewise for a better mortgage!</p>",
+        cta: "Learn More",
+        link: "https://domain.com/page?foo=159&bar=357"
+      }
+    ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-banner/1.1/embed.js"></script>
 ```
 
 ## Support

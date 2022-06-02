@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the product table embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 #### Example
@@ -21,20 +21,22 @@ Paste following line right after the `homewise` object. This loads the product t
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123"
+      code: "abc123",
+      segment: "xyz789"
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 #### Versions
 Homewise will versions time to time introducing new features and bug fixes. We recommend that you use the latest version 
-of embed script by changing the version number (e.g `/1.0/embed.js`). Following table shows available versions.
+of embed script by changing the version number (e.g `/1.3/embed.js`). Following table shows available versions.
 
-| Version | Notes                                   |
-|:-------:|-----------------------------------------|
-| **1.0** | First version with all launch features. |
+|            Version             | Notes                                                                    |
+|:------------------------------:|--------------------------------------------------------------------------|
+|              1.3               | Optimized. Links take `segment` into account. CTA label is customizable. |
+| [1.0](./archive/embed_1_0.md)  | First version with all launch features.                                  |
 
 
 ### Step 3
@@ -64,16 +66,34 @@ Optionally, customize the product table by adding `productTable` configuration o
 </script>
 ```
 
-| Property       | Required | Accepted Values                                                  | Default                        | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|----------------|:--------:|------------------------------------------------------------------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `bg`           |    N     | *Any hexadecimal color code.*                                    | `#ffffff`                      | Set default background color. Consider accessibility concerns when selecting the the colour.                                                                                                                                                                                                                                                                                                                                                  |
-| `primaryColor` |    N     | *Any hexadecimal color code.*                                    | `#147bc9`                      | Set default primary color. This sets colors for buttons and borders. Consider accessibility concerns when selecting the the colour.                                                                                                                                                                                                                                                                                                           |
-| `font`         |    N     | `true`,`false`                                                   | `true`                         | Toggle standard font load. `false` will allow you to apply the font used your website's CSS.                                                                                                                                                                                                                                                                                                                                                  |
-| `intro`        |    N     | `true`,`false`                                                   | `true`                         | Toggle leading headline and introduction copy.                                                                                                                                                                                                                                                                                                                                                                                                |
-| `province`     |    N     | `AB`,`BC`,`MB`,`NB`,`NL`,`NS`,<br/>`ON`,`PE`,`SK`,`NT`,`NU`,`YT` | `ON`                           | Set default province selection.                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `link`         |    N     | *Any URL.*                                                       | `https://my.thinkhomewise.com` | Set click through URL. Assuming Homewise online application is embedded in this page: <br/>- Query string variable `hw_product` should be captured and send back to embedded app as `hw_product`. <br/>- Query string variable `hw_state` should be captured and send back to embedded app as `state`. <br/><br/>e.g. `https://my.thinkhomewise.com/p/abc123/<hw_product_value>/embed?hw_product=<hw_product_value>&state=<hw_state_value>`   |
-| `cta`          |    N     | *Any string*                                                     | `Get This Mortgage`            | Set default CTA label. Provided value is converted to uppercase automatically.                                                                                                                                                                                                                                                                                                                                                                |
+#### Reference
+| Property       | Required | Accepted Values                                                        | Default                        |
+|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|
+| `bg`           |    N     | *Any hexadecimal color code.*                                          | `#ffffff`                      |
+| `primaryColor` |    N     | *Any hexadecimal color code.*                                          | `#147bc9`                      |
+| `font`         |    N     | `true`,`false`                                                         | `true`                         |
+| `intro`        |    N     | `true`,`false`                                                         | `true`                         |
+| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           |
+| `cta`          |    N     | *Any string*                                                           | `Get This Mortgage`            |
+| `link`         |    N     | *Any URL.*                                                             | `https://my.thinkhomewise.com` |
 
+##### Notes
+* `bg` - Set default background color. Consider accessibility concerns when selecting the colour.
+* `primaryColor` - Set default primary color. This sets colors for buttons and borders. Consider accessibility concerns when 
+  selecting the colour.
+* `font` - Toggle standard font load. `false` will allow you to apply the font used your website's CSS.
+* `intro` - Toggle leading headline and introduction copy. Customization is not allowed, but by toggling you can position
+  your own copy before the app embed container and make it seamless.
+* `province` - Set default province selection.
+* `cta` - Set default CTA label. Provided value is converted to uppercase automatically.
+* `link` - Set a custom click through URL. Assuming Homewise online application is embedded in this custom URL:
+  * `hw_product` URL variable must be captured and send back to embedded app as `hw_product` URL variable.
+  * `hw_state` URL variable must be captured and send back to embedded app as `state` URL variable.
+  * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
+  * _e.g. **with** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&state=<hw_state>` 
+    (`https://my.thinkhomewise.com/p/abc123/xyz789/embed?hw_product=prod456&state=aBc753dEf`)_
+  * _e.g. **without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&state=<hw_state>`.
+    (`https://my.thinkhomewise.com/p/abc123/embed?hw_product=prod456&state=aBc753dEf`)_
 
 #### Example
 ```html
@@ -81,7 +101,8 @@ Optionally, customize the product table by adding `productTable` configuration o
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123"
+      code: "abc123",
+      segment: "xyz789"
     },
     productTable: {
       bg: "#fff7ed",
@@ -94,7 +115,7 @@ Optionally, customize the product table by adding `productTable` configuration o
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.0/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 ## Support

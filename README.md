@@ -6,7 +6,7 @@ properties.
 Select a guide from the index below.
 
 - [Partner Configuration](./partner/configuration.md).
-- [Product Table](./mortgage_payment_calculator/embed.md).
+- [Product Table](./product_table/embed.md).
 - [Banners](./banners/embed.md).
 
 ## Homewise for Advisors

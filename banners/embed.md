@@ -11,7 +11,7 @@ Application embed.
 Complete [partner configuration](../partner/configuration.md).
 
 ### Step 2
-Paste following line right after the `homewise` object. This loads the banner embed script.
+Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
 <script src="https://widgets.thinkhomewise.com/lib/com-banner/1.1/embed.js"></script>

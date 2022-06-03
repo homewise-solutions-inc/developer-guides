@@ -9,7 +9,7 @@ This guide covers the steps to embed Homewise product table into your website.
 Complete [partner configuration](../partner/configuration.md).
 
 ### Step 2
-Paste following line right after the `homewise` object. This loads the product table embed script.
+Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
 <script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>

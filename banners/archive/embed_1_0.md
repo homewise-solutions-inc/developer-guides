@@ -32,8 +32,8 @@ Paste following line right after the `homewise` object. This loads the banner em
 ```
 
 #### Versions
-Homewise will versions time to time introducing new features and bug fixes. We recommend that you use the latest version 
-of embed script by changing the version number (e.g `/1.0/embed.js`). Following table shows available versions.
+Homewise will release versions time to time introducing new features and bug fixes. We recommend that you use the latest 
+version of embed script by changing the version number (e.g `/1.0/embed.js`). Following table shows available versions.
 
 | Version | Notes                                                                    |
 |:-------:|--------------------------------------------------------------------------|

@@ -3,20 +3,20 @@ Welcome to Homewise Developer Guides repository. If you are using any publicly a
 use this repository to find the correct developer guide to understand how to implement/integrate in to your online 
 properties. 
 
+## Available Widgets
 Select a guide from the index below.
 
 - [Partner Configuration](./partner/configuration.md).
 - [Product Table](./product_table/embed.md).
 - [Banners](./banners/embed.md).
+- [Mortgage Payment Calculator](./mortgage_payment_calculator/embed.md).
+- [Closing Costs Calculator](./closing_costs_calculator/embed.md).
+- [Affordability Calculator](./affordability_calculator/embed.md).
 
-## Homewise for Advisors
-- [Embed Mortgage Application](./homewise-advisors/embed.md).
-
-## Homewise for Partners
-- [Embed Mortgage Application](./homewise-partners/embed.md).
-
-## Homewise for Realtors
-- [Embed Mortgage Application](./homewise-realtors/embed.md).
+## Homewise Online Application
+- [Homewise for Advisors](./homewise-advisors/embed.md).
+- [Homewise for Partners](./homewise-partners/embed.md).
+- [Homewise for Realtors](./homewise-realtors/embed.md).
 
 ## Support
 Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via 

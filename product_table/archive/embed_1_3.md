@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 #### Example
@@ -26,18 +26,17 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions time to time introducing new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.4/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.3/embed.js`). Following table shows available versions.
 
-|            Version            | Notes                                                                    |
-|:-----------------------------:|--------------------------------------------------------------------------|
-|              1.4              | Option to show rental rates.                                             |
-| [1.3](./archive/embed_1_3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
-| [1.0](./archive/embed_1_0.md) | First version with all launch features.                                  |
+|            Version             | Notes                                                                    |
+|:------------------------------:|--------------------------------------------------------------------------|
+|              1.3               | Optimized. Links take `segment` into account. CTA label is customizable. |
+| [1.0](./archive/embed_1_0.md)  | First version with all launch features.                                  |
 
 
 ### Step 3
@@ -61,8 +60,7 @@ Optionally, customize the product table by adding `productTable` configuration o
       intro: <boolean>,
       province: <string>,
       link: <string>,
-      cta: <string>,
-      rental: <string>
+      cta: <string>
     }
   };
 </script>
@@ -78,7 +76,6 @@ Optionally, customize the product table by adding `productTable` configuration o
 | `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           |
 | `cta`          |    N     | *Any string*                                                           | `Get This Mortgage`            |
 | `link`         |    N     | *Any URL.*                                                             | `https://my.thinkhomewise.com` |
-| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           |
 
 ##### Notes
 * `bg` - Set default background color. Consider accessibility concerns when selecting the colour.
@@ -93,14 +90,10 @@ Optionally, customize the product table by adding `productTable` configuration o
   * `hw_product` URL variable must be captured and send back to embedded app as `hw_product` URL variable.
   * `hw_state` URL variable must be captured and send back to embedded app as `state` URL variable.
   * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
-    * _e.g. **with** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&state=<hw_state>` 
-     (`https://my.thinkhomewise.com/p/abc123/xyz789/embed?hw_product=prod456&state=aBc753dEf`)_
-    * _e.g. **without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&state=<hw_state>`.
-     (`https://my.thinkhomewise.com/p/abc123/embed?hw_product=prod456&state=aBc753dEf`)_
-* `rental` - Show available rental rates.
-  * `no` - Do not show rental rates. Default value.
-  * `mixed` - Include rental rates in the results. Shows a user controller to toggle between normal rates and mixed results.
-  * `filtered` - Show only rental rates.
+  * _e.g. **with** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&state=<hw_state>` 
+    (`https://my.thinkhomewise.com/p/abc123/xyz789/embed?hw_product=prod456&state=aBc753dEf`)_
+  * _e.g. **without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&state=<hw_state>`.
+    (`https://my.thinkhomewise.com/p/abc123/embed?hw_product=prod456&state=aBc753dEf`)_
 
 #### Example
 ```html
@@ -118,12 +111,11 @@ Optionally, customize the product table by adding `productTable` configuration o
       intro: false,
       province: "BC",
       link: "https://domain.com/page?foo=123&bar=456",
-      cta: "Learn More",
-      rental: "mixed"
+      cta: "Learn More"
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.3/embed.js"></script>
 ```
 
 ## Support

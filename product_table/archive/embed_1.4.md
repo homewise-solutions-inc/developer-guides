@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.5/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
 ```
 
 #### Example
@@ -26,17 +26,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.5/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions time to time introducing new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.5/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.4/embed.js`). Following table shows available versions.
 
 |            Version            | Notes                                                                    |
 |:-----------------------------:|--------------------------------------------------------------------------|
-|              1.5              | Customizable search input values.                                        |
-| [1.4](./archive/embed_1.4.md) | Available rental rate options.                                           |
+|              1.4              | Option to show rental rates.                                             |
 | [1.3](./archive/embed_1_3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
 | [1.0](./archive/embed_1_0.md) | First version with all launch features.                                  |
 
@@ -63,33 +62,23 @@ Optionally, customize the product table by adding `productTable` configuration o
       province: <string>,
       link: <string>,
       cta: <string>,
-      rental: <string>,
-      mortgageType: <string>,
-      rateType: <string>,
-      price: <number>,
-      downPayment: <number>,
-      balance: <number>
+      rental: <string>
     }
   };
 </script>
 ```
 
 #### Reference
-| Property       | Required | Accepted Values                                                        | Default                        | Version |
-|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
-| `bg`           |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
-| `primaryColor` |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
-| `font`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `intro`        |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
-| `cta`          |    N     | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
-| `link`         |    N     | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
-| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
-| `mortgageType` |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
-| `rateType`     |    N     | `fixed`, `variable`                                                    | `fixed`                        | 1.5+    |
-| `price`        |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
-| `downPayment`  |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
-| `balance`      |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
+| Property       | Required | Accepted Values                                                        | Default                        |
+|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|
+| `bg`           |    N     | *Any hexadecimal color code.*                                          | `#ffffff`                      |
+| `primaryColor` |    N     | *Any hexadecimal color code.*                                          | `#147bc9`                      |
+| `font`         |    N     | `true`,`false`                                                         | `true`                         |
+| `intro`        |    N     | `true`,`false`                                                         | `true`                         |
+| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           |
+| `cta`          |    N     | *Any string*                                                           | `Get This Mortgage`            |
+| `link`         |    N     | *Any URL.*                                                             | `https://my.thinkhomewise.com` |
+| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           |
 
 ##### Notes
 * `bg` - Set default background color. Consider accessibility concerns when selecting the colour.
@@ -112,13 +101,6 @@ Optionally, customize the product table by adding `productTable` configuration o
   * `no` - Do not show rental rates. Default value.
   * `mixed` - Include rental rates in the results. Shows a user controller to toggle between normal rates and mixed results.
   * `filtered` - Show only rental rates.
-* `price` - Set price amount. Value is shared with rental and non-rental views. Please find a value with more results.
-  If not set, 2 indicated default values are used (for `rental:no|mixed` and `rental:filtered` respectively).
-* `downPayment` - Set down payment amount for purchase. Value is shared with rental and non-rental views. Please find a
-  value with more results. If not set, 2 indicated default values are used (for `rental:no|mixed` and `rental:filtered` 
-  respectively).
-* `balance` - Set balance amount for refinance/switch. options on both rental and non-rental views. Please find a value 
-  with more results.
 
 #### Example
 ```html
@@ -137,16 +119,11 @@ Optionally, customize the product table by adding `productTable` configuration o
       province: "BC",
       link: "https://domain.com/page?foo=123&bar=456",
       cta: "Learn More",
-      rental: "mixed",
-      mortgageType: "purchase",
-      rateType: "fixed",
-      price: 650000,
-      downPayment: 90000,
-      balance: 130000
+      rental: "mixed"
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.5/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.4/embed.js"></script>
 ```
 
 ## Support

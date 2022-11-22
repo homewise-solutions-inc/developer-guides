@@ -30,7 +30,7 @@ Paste following line right after the `homewise` object. This loads the widget em
 ```
 
 #### Versions
-Homewise will release versions time to time introducing new features and bug fixes. We recommend that you use the latest 
+Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
 version of embed script by changing the version number (e.g `/1.3/embed.js`). Following table shows available versions.
 
 | Version | Notes                                                                   |
@@ -39,7 +39,7 @@ version of embed script by changing the version number (e.g `/1.3/embed.js`). Fo
 
 
 ### Step 3
-Paste following code where you want the Homewise Mortgage Payment calculator to appear.
+Paste following code where you want the widget to appear.
 ```html
 <div class="homewise_mortgage_payment_calculator"></div>
 ```

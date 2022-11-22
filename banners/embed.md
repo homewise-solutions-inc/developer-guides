@@ -32,7 +32,7 @@ Paste following line right after the `homewise` object. This loads the widget em
 ```
 
 #### Versions
-Homewise will release versions time to time introducing new features and bug fixes. We recommend that you use the latest 
+Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
 version of embed script by changing the version number (e.g `/1.1/embed.js`). Following table shows available versions.
 
 |            Version            | Notes                                       |

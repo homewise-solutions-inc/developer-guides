@@ -21,8 +21,8 @@ Paste following line right after the `homewise` object. This loads the widget em
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     }
   };
 </script>
@@ -74,8 +74,8 @@ default object.
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     },
     affordabilityCalculator: {
       bg: "#fff7ed"

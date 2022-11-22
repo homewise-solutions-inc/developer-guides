@@ -23,8 +23,8 @@ Paste following line right after the `homewise` object. This loads the widget em
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     }
   };
 </script>
@@ -112,8 +112,8 @@ configurations to the `homewise` default object.
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     },
     banner: [
       {

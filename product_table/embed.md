@@ -21,8 +21,8 @@ Paste following line right after the `homewise` object. This loads the widget em
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     }
   };
 </script>
@@ -37,8 +37,8 @@ version of embed script by changing the version number (e.g `/1.5/embed.js`). Fo
 |:-----------------------------:|--------------------------------------------------------------------------|
 |              1.5              | Customizable search input values.                                        |
 | [1.4](./archive/embed_1.4.md) | Available rental rate options.                                           |
-| [1.3](./archive/embed_1_3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
-| [1.0](./archive/embed_1_0.md) | First version with all launch features.                                  |
+| [1.3](./archive/embed_1.3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
+| [1.0](./archive/embed_1.0.md) | First version with all launch features.                                  |
 
 
 ### Step 3
@@ -126,8 +126,8 @@ Optionally, customize the product table by adding `productTable` configuration o
   var homewise = {
     partner: {
       type: "p",
-      code: "abc123",
-      segment: "xyz789"
+      code: "foo",
+      segment: "bar"
     },
     productTable: {
       bg: "#fff7ed",

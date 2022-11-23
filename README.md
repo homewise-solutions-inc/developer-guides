@@ -12,8 +12,12 @@ Select a guide from the index below.
 - [Mortgage Payment Calculator](./mortgage_payment_calculator/embed.md).
 - [Closing Costs Calculator](./closing_costs_calculator/embed.md).
 - [Affordability Calculator](./affordability_calculator/embed.md).
+- [Mortgage Application](./mortgage_application/embed.md). (**NEW!**)
 
-## Homewise Online Application
+## Homewise Online Application (LEGACY!)
+> :warning: This method of embedding Homewise online application on your website is now legacy. Please use the new
+> method documented above. Contact us (see footer) for any questions or concerns.
+
 - [Homewise for Advisors](./homewise-advisors/embed.md).
 - [Homewise for Partners](./homewise-partners/embed.md).
 - [Homewise for Realtors](./homewise-realtors/embed.md).

@@ -96,15 +96,18 @@ configurations to the `homewise` default object.
 * `body` - Overrides default body copy. Accepts standard HTML. Make sure your text is wrapped in a `<p></p>` tage to
   avoid incorrect spacing between text and the logo.
 * `cta` - Set default CTA label.
-* `link` - Set a custom click through URL. Assuming Homewise online application is embedded in this custom URL:
-  * `hw_product` URL variable must be captured and send back to embedded app as `hw_product` URL variable.
-  * `hw_state` URL variable must be captured and send back to embedded app as `state` URL variable.
-  * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
-    This segment value allows us to further group received applications.
-    * _e.g. **with** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?state=<hw_state>` 
-    (`https://my.thinkhomewise.com/p/abc123/xyz789/embed?state=aBc753dEf`)_
-    * _e.g. **without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?state=<hw_state>`.
-    (`https://my.thinkhomewise.com/p/abc123/embed?state=aBc753dEf`)_
+* `link` - Set a custom click through URL (_Read the points below if it leads to a page with Homewise mortgage
+  application embed_).
+  * Are you using the latest [mortgage application embed](../mortgage_application/embed.md)?
+    * **Yes** - Great! You are all set.
+    * **No** - Make sure you handle following query string parameters as described below.
+      * `hw_product` URL variable must be captured and send back to embedded app as `hw_product` URL variable.
+      * `hw_state` URL variable must be captured and send back to embedded app as `hw_state` URL variable.
+      * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
+        * _e.g. **With** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&state=<hw_state>`
+          (`https://my.thinkhomewise.com/p/foo/bar/embed?hw_product=prod456&state=aBc753dEf`)._
+        * _e.g. **Without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&state=<hw_state>`
+          (`https://my.thinkhomewise.com/p/foo/embed?hw_product=prod456&state=aBc753dEf`)._
 
 #### Example
 ```html

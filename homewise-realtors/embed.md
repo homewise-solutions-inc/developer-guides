@@ -1,3 +1,5 @@
+> :warning: This Homewise application embed method is now legacy. We encourage you to [try our latest embed](../mortgage_application/embed.md).
+
 # Embed Homewise Mortgage Application
 Thank you for partnering with Homewise!
 

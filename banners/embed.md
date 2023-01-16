@@ -49,9 +49,8 @@ array (see step 4 below). E.g. If 3 banners were configured, then the targets wi
 <!-- e.g. <div class="homewise_banner_0"></div>, <div class="homewise_banner_1"></div> -->
 ```
 
-
 ### Step 4
-Optionally, customize the banner by adding `banner` configuration object with a single or multiple banner customization
+Customize the banner by adding `banner` configuration object with a single or multiple banner customization
 configurations to the `homewise` default object.
 > :warning: Please refer to browser's console for errors.
 
@@ -104,9 +103,9 @@ configurations to the `homewise` default object.
       * `hw_product` URL variable must be captured and send back to embedded app as `hw_product` URL variable.
       * `hw_state` URL variable must be captured and send back to embedded app as `hw_state` URL variable.
       * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
-        * _e.g. **With** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&state=<hw_state>`
+        * _e.g. **With** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&hw_state=<hw_state>`
           (`https://my.thinkhomewise.com/p/foo/bar/embed?hw_product=prod456&state=aBc753dEf`)._
-        * _e.g. **Without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&state=<hw_state>`
+        * _e.g. **Without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&hw_state=<hw_state>`
           (`https://my.thinkhomewise.com/p/foo/embed?hw_product=prod456&state=aBc753dEf`)._
 
 #### Example

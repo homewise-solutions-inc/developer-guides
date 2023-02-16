@@ -102,6 +102,9 @@ configurations to the `homewise` default object.
 | `term`         |    N     | `any`, `1`, `3`, `4`, `5`                                              | `any`                          | 1.6+    |
 | `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
 
+> :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.
+> `homewise.productTable = [{},{},{}]`
+
 ##### Notes
 * `bg` - Set default background color. Consider accessibility concerns when selecting the colour.
 * `primaryColor` - Set default primary color. This sets colors for buttons and borders. Consider accessibility concerns when 

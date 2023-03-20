@@ -83,6 +83,23 @@ recommended. Fill it with correct values. This adds Homewise default configurati
 </script>
 ```
 
+### Step 4 (Optional)
+If there is a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) used on your website 
+make sure to update it to include following policy. 
+```
+"base-uri 'self';
+connect-src 'self' https://*.sentry.io/ https://*.thinkhomewise.com ;
+font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com ;
+form-action 'self';
+frame-ancestors 'self';
+frame-src 'self' ;
+img-src 'self' data: https:;
+media-src 'self' ;
+object-src 'self' ;
+script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com https://*.thinkhomewise.com;
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+```
+
 ## Support
 Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via
 email or on GitHub.

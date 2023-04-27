@@ -99,7 +99,7 @@ configurations to the `homewise` default object.
 | `price`        |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
 | `downPayment`  |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
 | `balance`      |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
-| `term`         |    N     | `any`, `1`, `3`, `4`, `5`                                              | `any`                          | 1.6+    |
+| `term`         |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
 | `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
 
 > :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.

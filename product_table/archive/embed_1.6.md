@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.7/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.6/embed.js"></script>
 ```
 
 #### Example
@@ -26,17 +26,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.7/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.6/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.7/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.6/embed.js`). Following table shows available versions.
 
 |            Version            | Notes                                                                    |
 |:-----------------------------:|--------------------------------------------------------------------------|
-|              1.7              | Updated `rateType` options. New `creditScore` option.                    |
-| [1.6](./archive/embed_1.6.md) | Multi widget configuration and more customizable search inputs.          |
+|              1.6              | Multi widget configuration and more customizable search inputs.          |
 | [1.5](./archive/embed_1.5.md) | Customizable search input values.                                        |
 | [1.4](./archive/embed_1.4.md) | Available rental rate options.                                           |
 | [1.3](./archive/embed_1.3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
@@ -85,24 +84,23 @@ configurations to the `homewise` default object.
 ```
 
 #### Reference
-| Property        | Required | Accepted Values                                                        | Default                        | Version |
-|-----------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
-| `bg`            |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
-| `primaryColor`  |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
-| `font`          |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `intro`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `province`      |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
-| `cta`           |    N     | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
-| `link`          |    N     | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
-| `rental`        |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
-| `mortgageType`  |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
-| `rateType`      |    N     | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
-| `price`         |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
-| `downPayment`   |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
-| `balance`       |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
-| `term`          |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
-| `lenderType`    |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
-| `creditScore`   |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
+| Property       | Required | Accepted Values                                                        | Default                        | Version |
+|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
+| `bg`           |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
+| `primaryColor` |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
+| `font`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `intro`        |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
+| `cta`          |    N     | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
+| `link`         |    N     | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
+| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
+| `mortgageType` |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
+| `rateType`     |    N     | `fixed`, `variable`                                                    | `fixed`                        | 1.5+    |
+| `price`        |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
+| `downPayment`  |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
+| `balance`      |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
+| `term`         |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
+| `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
 
 > :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.
 > `homewise.productTable = [{},{},{}]`
@@ -141,7 +139,6 @@ configurations to the `homewise` default object.
   with more results.
 * `term` - Set default rate term (in years).
 * `lenderType` - Set default lender type.
-* `creditScore` - What type of lenders and rates to show. Score of 650+ for A-type. Score below 650 for B-type.
 
 #### Example
 ```html
@@ -168,8 +165,7 @@ configurations to the `homewise` default object.
         downPayment: 90000,
         balance: 130000,
         term: "3",
-        lenderType: "credit_union",
-        creditScore: "any"
+        lenderType: "credit_union"
       },
       {
         bg: "#fff7ed",
@@ -181,18 +177,17 @@ configurations to the `homewise` default object.
         link: "https://domain.com/page?foo=123&bar=456",
         rental: "mixed",
         mortgageType: "refinance",
-        rateType: "any",
+        rateType: "variable",
         price: 650000,
         downPayment: 90000,
         balance: 130000,
         term: "4",
-        lenderType: "monoline",
-        creditScore: "650_900"
+        lenderType: "monoline"
       }
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.7/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.6/embed.js"></script>
 ```
 
 ## Support

@@ -78,7 +78,10 @@ configurations to the `homewise` default object.
         downPayment: <number>,
         balance: <number>,
         term: <string>,
-        lenderType: <string>                            
+        lenderType: <string>,
+        creditScore: <string>,
+        featureCount: <number>,
+        hide: [<string>]
       }
     ]
   };
@@ -86,26 +89,26 @@ configurations to the `homewise` default object.
 ```
 
 #### Reference
-| Property       | Required | Data Type  | Accepted Values                                                        | Default                        | Version |
-|----------------|:--------:|:----------:|------------------------------------------------------------------------|--------------------------------|---------|
-| `bg`           |    N     |  `String`  | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
-| `primaryColor` |    N     |  `String`  | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
-| `font`         |    N     | `Boolean`  | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `intro`        |    N     | `Boolean`  | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `province`     |    N     |  `String`  | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
-| `cta`          |    N     |  `String`  | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
-| `link`         |    N     |  `String`  | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
-| `rental`       |    N     |  `String`  | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
-| `mortgageType` |    N     |  `String`  | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
-| `rateType`     |    N     |  `String`  | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
-| `price`        |    N     |  `Number`  | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
-| `downPayment`  |    N     |  `Number`  | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
-| `balance`      |    N     |  `Number`  | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
-| `term`         |    N     |  `String`  | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
-| `lenderType`   |    N     |  `String`  | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
-| `creditScore`  |    N     |  `String`  | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
-| `featureCount` |    N     |  `Number`  | `2` - `10`                                                             | `3`                            | 1.8+    |
-| `hide`         |    N     | `[String]` | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
+| Property       | Required | Accepted Values                                                        | Default                        | Version |
+|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
+| `bg`           |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
+| `primaryColor` |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
+| `font`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `intro`        |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
+| `cta`          |    N     | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
+| `link`         |    N     | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
+| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
+| `mortgageType` |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
+| `rateType`     |    N     | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
+| `price`        |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
+| `downPayment`  |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
+| `balance`      |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
+| `term`         |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
+| `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
+| `creditScore`  |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
+| `featureCount` |    N     | `2` - `10`                                                             | `3`                            | 1.8+    |
+| `hide`         |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
 
 > :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.
 > `homewise.productTable = [{},{},{}]`
@@ -194,7 +197,7 @@ configurations to the `homewise` default object.
         balance: 130000,
         term: "4",
         lenderType: "monoline",
-        creditScore: "650_900"
+        creditScore: "650_900",
         featureCount: 4,
         hide: ["lenderType"]
       }

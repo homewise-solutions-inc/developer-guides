@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.8/embed.js"></script>
 ```
 
 #### Example
@@ -26,17 +26,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.8/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.9/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.8/embed.js`). Following table shows available versions.
 
 |            Version            | Notes                                                                    |
 |:-----------------------------:|--------------------------------------------------------------------------|
-|              1.9              | New `lenderName` filter added.                                           |
-| [1.8](./archive/embed_1.8.md) | New `featureCount` & controller `hide` options. Visible product names.   |
+|              1.8              | New `featureCount` & controller `hide` options. Visible product names.   |
 | [1.7](./archive/embed_1.7.md) | Updated `rateType` options. New `creditScore` option.                    |
 | [1.6](./archive/embed_1.6.md) | Multi widget configuration and more customizable search inputs.          |
 | [1.5](./archive/embed_1.5.md) | Customizable search input values.                                        |
@@ -82,8 +81,7 @@ configurations to the `homewise` default object.
         lenderType: <string>,
         creditScore: <string>,
         featureCount: <number>,
-        hide: [<string>],
-        lenderName: [<string>]
+        hide: [<string>]
       }
     ]
   };
@@ -98,8 +96,8 @@ configurations to the `homewise` default object.
 | `font`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
 | `intro`        |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
 | `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
-| `cta`          |    N     | `<string>`                                                             | `Get This Mortgage`            | 1.3+    |
-| `link`         |    N     | `<uri>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
+| `cta`          |    N     | `<STRING>`                                                             | `Get This Mortgage`            | 1.3+    |
+| `link`         |    N     | `<URI>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
 | `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
 | `mortgageType` |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
 | `rateType`     |    N     | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
@@ -111,7 +109,6 @@ configurations to the `homewise` default object.
 | `creditScore`  |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
 | `featureCount` |    N     | `2` - `10`                                                             | `3`                            | 1.8+    |
 | `hide`         |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
-| `lenderName`   |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
 
 > :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.
 > `homewise.productTable = [{},{},{}]`
@@ -153,7 +150,6 @@ configurations to the `homewise` default object.
 * `creditScore` - What type of lenders and rates to show. Score of 650+ for A-type. Score below 650 for B-type.
 * `featureCount` - Allows you to limit (or increase) the number of features listed in bullet form.
 * `hide` - Define the UI controls you want hidden. Default or set values from configuration is used in search.
-* `lenderName` - Provide a list of lender codes to filter the results by. Your Homewise contact will provide this list to you.
 
 #### Example
 ```html
@@ -203,13 +199,12 @@ configurations to the `homewise` default object.
         lenderType: "monoline",
         creditScore: "650_900",
         featureCount: 4,
-        hide: ["lenderType"],
-        lenderName: ["rfa","td"]
+        hide: ["lenderType"]
       }
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.8/embed.js"></script>
 ```
 
 ## Support

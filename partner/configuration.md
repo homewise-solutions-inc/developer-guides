@@ -76,8 +76,8 @@ recommended. Fill it with correct values. This adds Homewise default configurati
   var homewise = {
     partner: {
       type: "p",
-      code: "foo",
-      segment: "bar"
+      code: "partner_code_goes_here",
+      segment: "optional_segment_goes_here"
     }
   };
 </script>

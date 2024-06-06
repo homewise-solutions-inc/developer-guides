@@ -12,7 +12,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
 ```
 
 #### Example
@@ -26,17 +26,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.10/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.9/embed.js`). Following table shows available versions.
 
 |            Version            | Notes                                                                    |
 |:-----------------------------:|--------------------------------------------------------------------------|
-|             1.10              | Updated `featureCount`. New click events and `style` options. Bug fixes. |
-| [1.9](./archive/embed_1.9.md) | New `lenderName` filter added.                                           |
+|              1.9              | New `lenderName` filter added.                                           |
 | [1.8](./archive/embed_1.8.md) | New `featureCount` & controller `hide` options. Visible product names.   |
 | [1.7](./archive/embed_1.7.md) | Updated `rateType` options. New `creditScore` option.                    |
 | [1.6](./archive/embed_1.6.md) | Multi widget configuration and more customizable search inputs.          |
@@ -56,10 +55,9 @@ array (see step 4 below). E.g. If 3 product tables were configured, then the tar
 ```
 
 ### Step 4 - Optional
-Customize the widget by adding `productTable` configuration object with a single or multiple banner customization
+Customize the banner by adding `productTable` configuration object with a single or multiple banner customization
 configurations to the `homewise` default object.
-> [!WARNING]
-> Please refer to browser's console for errors.
+> :warning: Please refer to browser's console for errors.
 
 ```html
 <script>
@@ -111,12 +109,12 @@ configurations to the `homewise` default object.
 | `term`         |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
 | `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
 | `creditScore`  |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
-| `featureCount` |    N     | `0` - `10`                                                             | `3`                            | 1.10+   |
+| `featureCount` |    N     | `2` - `10`                                                             | `3`                            | 1.8+    |
 | `hide`         |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
 | `lenderName`   |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
 
-> [!TIP]
-> Configure product table array with empty objects to render product tables(s) using default values. E.g. `homewise.productTable = [{},{},{}]`
+> :bulb: Configure product table array with empty objects to render product tables(s) using default values. E.g.
+> `homewise.productTable = [{},{},{}]`
 
 ##### Notes
 * `bg` - Set default background color. Consider accessibility concerns when selecting the colour.
@@ -153,7 +151,7 @@ configurations to the `homewise` default object.
 * `term` - Set default rate term (in years).
 * `lenderType` - Set default lender type.
 * `creditScore` - What type of lenders and rates to show. Score of 650+ for A-type. Score below 650 for B-type.
-* `featureCount` - Limit (or increase) the number of features listed in bullet form. Value `0` will completely hide features.
+* `featureCount` - Allows you to limit (or increase) the number of features listed in bullet form.
 * `hide` - Define the UI controls you want hidden. Default or set values from configuration is used in search.
 * `lenderName` - Provide a list of lender codes to filter the results by. Your Homewise contact will provide this list to you.
 
@@ -211,69 +209,7 @@ configurations to the `homewise` default object.
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
-```
-
-### Step 5 - Optional
-Call your custom functions (e.g. web analytics, product analytics) by listening to widget's native events. Following events are available.
-
-| Event                           | Description                                           | Version |
-|---------------------------------|-------------------------------------------------------|---------|
-| `hw_product_table_search_click` | Fires per search button click, per instance.          | 1.10+   |
-| `hw_product_table_rate_click`   | Fires per rate search result CTA click, per instance. | 1.10+   |
-
-#### Example
-```html
-<script>
-  var homewise = {...};
-</script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
-<script>
-  window.addEventListener("hw_product_table_search_click", (e) => {
-    console.log(e.detail);
-  });
-  window.addEventListener("hw_product_table_rate_click", (e) => {
-    console.log(e.detail);
-  });
-</script>
-```
-
-#### Event Details
-Event's detail object (refer to `e.detail` above) is available to use. Schemas are shown below. 
-
-##### Schema - `hw_product_table_search_click` 
-```json lines
-{
-  "className": <string>,
-  "index": <string>,
-  "balance": <number>,
-  "borrowing": <number>,
-  "creditScore": <string>,
-  "downPayment": <number>,
-  "hide": [<string>],
-  "isRental": <boolean>,
-  "lenderName": [<string>],
-  "lenderType": <string>,
-  "mortgageType": <string>,
-  "price": <number>,
-  "province": <string>,
-  "rateType": <string>,
-  "rentalToggle": <string>,
-  "term": <string>
-}
-```
-
-##### Schema - `hw_product_table_rate_click`
-```json lines
-{
-  "className": <string>,
-  "index": <string>,
-  "legal_name": <string>,
-  "lender": <string>,
-  "payment": <number>,
-  "rate_value": <number>,
-  "term": <number>
-}
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.9/embed.js"></script>
 ```
 
 ## Support
@@ -283,3 +219,10 @@ email or on GitHub.
 **© Homewise Solutions Inc. All rights reserved.**
 
 [Privacy Policy](https://thinkhomewise.com/page/privacy/) | [Terms of Agreement](https://thinkhomewise.com/page/term/).
+
+
+
+
+
+
+

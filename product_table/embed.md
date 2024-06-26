@@ -55,7 +55,7 @@ array (see step 4 below). E.g. If 3 product tables were configured, then the tar
 <!-- e.g. <div class="homewise_product_table_0"></div>, <div class="homewise_product_table_1"></div> -->
 ```
 
-### Step 4 - Optional
+### Step 4
 Customize the widget by adding `productTable` configuration object with a single or multiple banner customization
 configurations to the `homewise` default object.
 > [!WARNING]

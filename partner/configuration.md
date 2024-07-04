@@ -1,4 +1,7 @@
 # Homewise Partner Configuration for Embeds
+Thank you for [partnering with Homewise](https://youtu.be/yz-ZVXk6R2k)! Remember, there are
+[multiple ways to share](https://www.youtube.com/watch?v=m2HKbYtsZl8) your personalized URL or widgets!
+
 This documentation covers the steps you should take before embedding any Homewise widgets that are publicly available.
 Thank you for interest with Homewise!
 

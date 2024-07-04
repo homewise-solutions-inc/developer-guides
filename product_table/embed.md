@@ -1,5 +1,6 @@
 # Embed Homewise Product Table
-Thank you for partnering with Homewise!
+Thank you for [partnering with Homewise](https://youtu.be/yz-ZVXk6R2k)! Remember, there are 
+[multiple ways to share](https://www.youtube.com/watch?v=m2HKbYtsZl8) your personalized URL or widgets! 
 
 This guide covers the steps to embed Homewise product table into your website.
 
@@ -85,7 +86,8 @@ configurations to the `homewise` default object.
         creditScore: <string>,
         featureCount: <number>,
         hide: [<string>],
-        lenderName: [<string>]
+        lenderName: [<string>],
+        style: <string>                                      
       }
     ]
   };
@@ -114,6 +116,7 @@ configurations to the `homewise` default object.
 | `featureCount` |    N     | `0` - `10`                                                             | `3`                            | 1.10+   |
 | `hide`         |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
 | `lenderName`   |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
+| `style`        |    N     | `table`, `card`                                                        | `table`                        | 1.10+   |
 
 > [!TIP]
 > Configure product table array with empty objects to render product tables(s) using default values. E.g. `homewise.productTable = [{},{},{}]`
@@ -156,6 +159,7 @@ configurations to the `homewise` default object.
 * `featureCount` - Limit (or increase) the number of features listed in bullet form. Value `0` will completely hide features.
 * `hide` - Define the UI controls you want hidden. Default or set values from configuration is used in search.
 * `lenderName` - Provide a list of lender codes to filter the results by. Your Homewise contact will provide this list to you.
+* `style` - How to render the layout. Supports HTML table style or a modern card layout.
 
 #### Example
 ```html
@@ -206,7 +210,8 @@ configurations to the `homewise` default object.
         creditScore: "650_900",
         featureCount: 4,
         hide: ["lenderType"],
-        lenderName: ["rfa","td"]
+        lenderName: ["rfa","td"],
+        style: "card"
       }
     ]
   };

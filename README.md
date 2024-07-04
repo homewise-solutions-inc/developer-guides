@@ -1,7 +1,10 @@
 # Homewise Public Developer Guides
 Welcome to Homewise Developer Guides repository. If you are using any publicly available technology assets from Homewise,
 use this repository to find the correct developer guide to understand how to implement/integrate in to your online 
-properties. 
+properties.
+
+Thank you for [partnering with Homewise](https://youtu.be/yz-ZVXk6R2k)! Remember, there are
+[multiple ways to share](https://www.youtube.com/watch?v=m2HKbYtsZl8) your personalized URL or widgets!
 
 ## Available Widgets
 Select a guide from the index below.

@@ -1,5 +1,6 @@
 # Embed Homewise Banners
-Thank you for partnering with Homewise!
+Thank you for [partnering with Homewise](https://youtu.be/yz-ZVXk6R2k)! Remember, there are
+[multiple ways to share](https://www.youtube.com/watch?v=m2HKbYtsZl8) your personalized URL or widgets!
 
 This guide covers the steps to embed Homewise banners into your website. These widgets can be used throughout your
 website to act as drivers to Homewise Online Application proper or a custom page that you maintain with a Homewise

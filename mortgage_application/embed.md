@@ -1,5 +1,6 @@
 # Embed Homewise  Mortgage Application
-Thank you for partnering with Homewise!
+Thank you for [partnering with Homewise](https://youtu.be/yz-ZVXk6R2k)! Remember, there are
+[multiple ways to share](https://www.youtube.com/watch?v=m2HKbYtsZl8) your personalized URL or widgets!
 
 This guide covers the steps to embed Homewise mortgage application into your website.
 

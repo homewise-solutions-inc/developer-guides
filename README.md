@@ -15,6 +15,7 @@ Select a guide from the index below.
 - [Mortgage Payment Calculator](./mortgage_payment_calculator/embed.md)
 - [Closing Costs Calculator](./closing_costs_calculator/embed.md)
 - [Affordability Calculator](./affordability_calculator/embed.md)
+- [Rental Offset/Add-Back Calculator](./rental_offset_calculator/embed.md) - :star2: NEW! :star2:
 - [Mortgage Application](./mortgage_application/embed.md) - :star2: NEW! :star2:
 
 ## Homewise Online Application (LEGACY!)

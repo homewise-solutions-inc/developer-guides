@@ -39,7 +39,7 @@ version of embed script by changing the version number (e.g `/1.1/embed.js`). Fo
 |            Version            | Notes                                       |
 |:-----------------------------:|---------------------------------------------|
 |              1.1              | Supports multiple banners on the same page. |
-| [1.0](./archive/embed_1_0.md) | First version with all launch features.     |
+| [1.0](./archive/embed_1.0.md) | First version with all launch features.     |
 
 ### Step 3
 Use following target class naming format where `N` is the position (index) of the configuration in the configuration 

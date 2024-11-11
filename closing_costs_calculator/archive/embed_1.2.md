@@ -27,17 +27,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-closing-costs-calculator/1.3/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-closing-costs-calculator/1.2/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.3/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.2/embed.js`). Following table shows available versions.
 
-|            Version            | Notes                                   |
-|:-----------------------------:|-----------------------------------------|
-|              1.3              | Bug fixes. UI improvements.             |
-| [1.2](./archive/embed_1.2.md) | First version with all launch features. |
+| Version | Notes                                                                   |
+|:-------:|-------------------------------------------------------------------------|
+|   1.2   | First version with all launch features.                                 |
 
 
 ### Step 3
@@ -84,7 +83,7 @@ default object.
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-closing-costs-calculator/1.3/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-closing-costs-calculator/1.2/embed.js"></script>
 ```
 
 ## Support

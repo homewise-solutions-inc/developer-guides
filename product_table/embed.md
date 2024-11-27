@@ -281,6 +281,74 @@ Event's detail object (refer to `e.detail` above) is available to use. Schemas a
 }
 ```
 
+### Step 6 - Optional
+This section outlines the class structure and hierarchy for the components used in this project. It also includes 
+specific wrapping divs, which are named by index (e.g., `homewise_product_table_{your-index}`) and have an ID based on 
+the device type (e.g., `homewise_product_table_d` for desktop or `homewise_product_table_m` for mobile). Use this as a 
+reference when developing or updating styles.
+
+#### 1. Card Component
+The `hw__card` component displays key product information. It is divided into three main sections:
+
+- **Content (`hw__content`)**: Contains the logo, product details, and rate information.
+- **Action (`hw__action`)**: Houses buttons or actions like "Apply Now."
+- **Accordion (`hw__accordion`)**: Additional expandable information.
+```
+hw__card
+  ├── hw__content
+  │     ├── hw__logo
+  │     │     └── hw__logo-image (e.g., lender's logo)
+  │     ├── hw__details
+  │     │     ├── hw__features
+  │     │     │     └── ul > li (list of features like "Cashback")
+  │     │     ├── hw__rate
+  │     │     │     ├── hw__h2 (rate value, e.g., 5.25%)
+  │     │     │     └── small (rate description)
+  │     │     ├── hw__monthly
+  │     │           ├── hw__h2 (monthly payment amount)
+  │     │           └── small (e.g., "per month")
+  ├── hw__action
+  └── hw__accordion
+        └── hw__accordion-ul
+              └── li (each expandable item)
+```
+
+#### 2. Table Body (Desktop View)
+The `hw__table-body` displays product information in a tabular format for larger screens.
+```
+hw__table-body
+  ├── hw__logo-image (e.g., lender's logo)
+  ├── hw__legal-name (e.g., lender's full name)
+  ├── hw__product-name (e.g., product name)
+  ├── hw__features
+  │     └── ul > li (list of product features)
+  ├── hw__rate
+  │     ├── h4 (e.g., 5.25%)
+  │     └── small (rate type, e.g., "Fixed")
+  ├── hw__term
+  │     ├── h4 (term length, e.g., "5 years")
+  │     └── small (additional term info)
+  ├── hw__payment
+  │     ├── h4 (e.g., $1,250)
+  │     └── small (e.g., "per month")
+  └── hw__action (e.g., button for "More Info")
+```
+
+#### 3. Table Body (Mobile View)
+The `hw__table-mobile` adapts the table structure for smaller screens. Key details are presented compactly.
+```
+hw__table-mobile
+  ├── hw__table-body-mobile
+  │     ├── hw__table-mobile-lender
+  │     │     ├── hw__logo-image (e.g., lender's logo)
+  │     │     └── hw__product-name (e.g., product name)
+  │     └── hw__table-mobile-action
+  │           ├── p (rate details)
+  │           ├── small (term and rate type)
+  │           ├── h4 (payment amount)
+  │           └── small (e.g., "per month")
+```
+
 ## Support
 Contact Homewise Solutions Inc. at *hello[at]thinkhomewise.com* for support. Feel free to report any bugs you find via 
 email or on GitHub.

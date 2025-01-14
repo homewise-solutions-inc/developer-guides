@@ -13,7 +13,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
 ```
 
 #### Example
@@ -27,25 +27,25 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.14/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.10/embed.js`). Following table shows available versions.
 
-|             Version             | Notes                                                                    |
-|:-------------------------------:|--------------------------------------------------------------------------|
-|              1.14               | `linkParameters` and `linkFragments` added to enrich `link` param.       |
-| [1.10](./archive/embed_1.10.md) | Updated `featureCount`. New click events and `style` options. Bug fixes. |
-|  [1.9](./archive/embed_1.9.md)  | New `lenderName` filter added.                                           |
-|  [1.8](./archive/embed_1.8.md)  | New `featureCount` & controller `hide` options. Visible product names.   |
-|  [1.7](./archive/embed_1.7.md)  | Updated `rateType` options. New `creditScore` option.                    |
-|  [1.6](./archive/embed_1.6.md)  | Multi widget configuration and more customizable search inputs.          |
-|  [1.5](./archive/embed_1.5.md)  | Customizable search input values.                                        |
-|  [1.4](./archive/embed_1.4.md)  | Available rental rate options.                                           |
-|  [1.3](./archive/embed_1.3.md)  | Optimized. Links take `segment` into account. CTA label is customizable. |
-|  [1.0](./archive/embed_1.0.md)  | First version with all launch features.                                  |
+|            Version            | Notes                                                                    |
+|:-----------------------------:|--------------------------------------------------------------------------|
+|             1.10              | Updated `featureCount`. New click events and `style` options. Bug fixes. |
+| [1.9](./archive/embed_1.9.md) | New `lenderName` filter added.                                           |
+| [1.8](./archive/embed_1.8.md) | New `featureCount` & controller `hide` options. Visible product names.   |
+| [1.7](./archive/embed_1.7.md) | Updated `rateType` options. New `creditScore` option.                    |
+| [1.6](./archive/embed_1.6.md) | Multi widget configuration and more customizable search inputs.          |
+| [1.5](./archive/embed_1.5.md) | Customizable search input values.                                        |
+| [1.4](./archive/embed_1.4.md) | Available rental rate options.                                           |
+| [1.3](./archive/embed_1.3.md) | Optimized. Links take `segment` into account. CTA label is customizable. |
+| [1.0](./archive/embed_1.0.md) | First version with all launch features.                                  |
+
 
 ### Step 3
 Use following target class naming format where `N` is the position (index) of the configuration in the configuration
@@ -75,8 +75,6 @@ configurations to the `homewise` default object.
         province: <string>,
         cta: <string>,
         link: <string>,
-        linkParameters: <object>,
-        linkFragments: <object>,
         rental: <string>,
         mortgageType: <string>,
         rateType: <string>,
@@ -97,30 +95,28 @@ configurations to the `homewise` default object.
 ```
 
 #### Reference
-| Property         | Required | Accepted Values                                                        | Default                        | Version |
-|------------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
-| `bg`             |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
-| `primaryColor`   |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
-| `font`           |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `intro`          |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
-| `province`       |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
-| `cta`            |    N     | `<string>`                                                             | `Get This Mortgage`            | 1.3+    |
-| `link`           |    N     | `<uri>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
-| `linkParameters` |    N     | `{name:value}`                                                         | `{}`                           | 1.14+   |
-| `linkFragments`  |    N     | `{name:value}`                                                         | `{}`                           | 1.14+   |
-| `rental`         |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
-| `mortgageType`   |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
-| `rateType`       |    N     | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
-| `price`          |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
-| `downPayment`    |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
-| `balance`        |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
-| `term`           |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
-| `lenderType`     |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
-| `creditScore`    |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
-| `featureCount`   |    N     | `0` - `10`                                                             | `3`                            | 1.10+   |
-| `hide`           |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
-| `lenderName`     |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
-| `style`          |    N     | `table`, `card`                                                        | `table`                        | 1.10+   |
+| Property       | Required | Accepted Values                                                        | Default                        | Version |
+|----------------|:--------:|------------------------------------------------------------------------|--------------------------------|---------|
+| `bg`           |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#ffffff`                      | 1.0+    |
+| `primaryColor` |    N     | `^#(?:[0-9a-fA-F]{3}){1,2}$`                                           | `#147bc9`                      | 1.0+    |
+| `font`         |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `intro`        |    N     | `true`,`false`                                                         | `true`                         | 1.0+    |
+| `province`     |    N     | `AB`, `BC`, `MB`, `NB`, `NL`, `NS`, `ON`, `PE`, `SK`, `NT`, `NU`, `YT` | `ON`                           | 1.0+    |
+| `cta`          |    N     | `<string>`                                                             | `Get This Mortgage`            | 1.3+    |
+| `link`         |    N     | `<uri>`                                                                | `https://my.thinkhomewise.com` | 1.3+    |
+| `rental`       |    N     | `no`, `mixed`, `filtered`                                              | `no`                           | 1.4+    |
+| `mortgageType` |    N     | `purchase`, `refinance`, `switch`                                      | `purchase`                     | 1.5+    |
+| `rateType`     |    N     | `any`, `fixed`, `variable`                                             | `fixed`                        | 1.7+    |
+| `price`        |    N     | `80000` - `100000000`                                                  | `650000`,`1000000`             | 1.5+    |
+| `downPayment`  |    N     | `0` - `100000000`                                                      | `90000`, `200000`              | 1.5+    |
+| `balance`      |    N     | `0` - `100000000`                                                      | `130000`                       | 1.5+    |
+| `term`         |    N     | `any`, `1`,`2`,`3`,`4`,`5`,`7`,`10`                                    | `any`                          | 1.6+    |
+| `lenderType`   |    N     | `any`, `bank`, `monoline`, `credit_union`                              | `any`                          | 1.6+    |
+| `creditScore`  |    N     | `any`, `300_649`, `650_900`                                            | `650_900`                      | 1.7+    |
+| `featureCount` |    N     | `0` - `10`                                                             | `3`                            | 1.10+   |
+| `hide`         |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
+| `lenderName`   |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
+| `style`        |    N     | `table`, `card`                                                        | `table`                        | 1.10+   |
 
 > [!TIP]
 > Configure product table array with empty objects to render product tables(s) using default values. E.g. `homewise.productTable = [{},{},{}]`
@@ -143,13 +139,9 @@ configurations to the `homewise` default object.
       * `hw_state` URL variable must be captured and send back to embedded app as `hw_state` URL variable.
       * `hw_segment` URL variable must be captured and send back to embedded app as part of the path before `/embed` bit.
         * _e.g. **With** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/<hw_segment>/embed?hw_product=<hw_product>&hw_state=<hw_state>` 
-         (`https://my.thinkhomewise.com/p/foo/bar/embed?hw_product=prod456&hw_state=aBc753dEf`)._
+         (`https://my.thinkhomewise.com/p/foo/bar/embed?hw_product=prod456&state=aBc753dEf`)._
         * _e.g. **Without** `hw_segment` - `https://my.thinkhomewise.com/<partner_type>/<partner_code>/embed?hw_product=<hw_product>&hw_state=<hw_state>`
-         (`https://my.thinkhomewise.com/p/foo/embed?hw_product=prod456&hw_state=aBc753dEf`)._
-* `linkParameters` - Additional URL query string parameters you want to share with the destination page or with Homewise 
-  to capture and report back to you. 
-* `linkFragments` - Additional URL path fragments you want to share with the destination page or with Homewise to capture 
-  and report back to you.
+         (`https://my.thinkhomewise.com/p/foo/embed?hw_product=prod456&state=aBc753dEf`)._
 * `rental` - Show available rental rates.
   * `no` - Do not show rental rates. Default value.
   * `mixed` - Include rental rates in the results. Shows a user controller to toggle between normal rates and mixed results.
@@ -187,8 +179,6 @@ configurations to the `homewise` default object.
         province: "BC",
         cta: "Learn More",
         link: "https://domain.com/page?foo=123&bar=456",
-        linkParameters: { client_id:"abc123", client_src:"btn_click" },
-        linkFragments: { scrollTo:"body_copy" }
         rental: "mixed",
         mortgageType: "purchase",
         rateType: "fixed",
@@ -208,8 +198,7 @@ configurations to the `homewise` default object.
         intro: true,
         province: "ON",
         cta: "Learn More",
-        linkParameters: { client_id:"abc123", client_src:"btn_click" },
-        linkFragments: { scrollTo:"body_copy" }
+        link: "https://domain.com/page?foo=123&bar=456",
         rental: "mixed",
         mortgageType: "refinance",
         rateType: "any",
@@ -227,7 +216,7 @@ configurations to the `homewise` default object.
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
 ```
 
 ### Step 5 - Optional
@@ -243,7 +232,7 @@ Call your custom functions (e.g. web analytics, product analytics) by listening 
 <script>
   var homewise = {...};
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.10/embed.js"></script>
 <script>
   window.addEventListener("hw_product_table_search_click", (e) => {
     console.log(e.detail);

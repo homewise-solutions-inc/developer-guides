@@ -13,7 +13,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
 ```
 
 #### Example
@@ -27,17 +27,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.15/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.14/embed.js`). Following table shows available versions.
 
 |             Version             | Notes                                                                    |
 |:-------------------------------:|--------------------------------------------------------------------------|
-|              1.15               | `accreditation` configuration parameter added.                           |
-| [1.14](./archive/embed_1.14.md) | `linkParameters` and `linkFragments` added to enrich `link` param.       |
+|              1.14               | `linkParameters` and `linkFragments` added to enrich `link` param.       |
 | [1.10](./archive/embed_1.10.md) | Updated `featureCount`. New click events and `style` options. Bug fixes. |
 |  [1.9](./archive/embed_1.9.md)  | New `lenderName` filter added.                                           |
 |  [1.8](./archive/embed_1.8.md)  | New `featureCount` & controller `hide` options. Visible product names.   |
@@ -122,7 +121,6 @@ configurations to the `homewise` default object.
 | `hide`           |    N     | `lenderType`, `term`, `creditScore`                                    | `[]`                           | 1.8+    |
 | `lenderName`     |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
 | `style`          |    N     | `table`, `card`                                                        | `table`                        | 1.10+   |
-| `accreditation`  |    N     | `true`,`false`                                                         | `true`                         | 1.15+   |
 
 > [!TIP]
 > Configure product table array with empty objects to render product tables(s) using default values. E.g. `homewise.productTable = [{},{},{}]`
@@ -170,7 +168,6 @@ configurations to the `homewise` default object.
 * `hide` - Define the UI controls you want hidden. Default or set values from configuration is used in search.
 * `lenderName` - Provide a list of lender codes to filter the results by. Your Homewise contact will provide this list to you.
 * `style` - How to render the layout. Supports HTML table style or a modern card layout.
-* `accreditation` - Show or hide accreditation to Homewise (=logo) per search result.
 
 #### Example
 ```html
@@ -230,7 +227,7 @@ configurations to the `homewise` default object.
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
 ```
 
 ### Step 5 - Optional
@@ -246,7 +243,7 @@ Call your custom functions (e.g. web analytics, product analytics) by listening 
 <script>
   var homewise = {...};
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.14/embed.js"></script>
 <script>
   window.addEventListener("hw_product_table_search_click", (e) => {
     console.log(e.detail);

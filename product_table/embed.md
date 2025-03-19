@@ -235,7 +235,7 @@ configurations to the `homewise` default object.
         featureCount: 4,
         hide: ["lenderType"],
         lenderName: ["rfa","td"],
-        style: "card"
+        style: "card",
         accreditation: true,
         productName: false
       }

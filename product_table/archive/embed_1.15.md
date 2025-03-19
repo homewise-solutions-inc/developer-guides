@@ -13,7 +13,7 @@ Complete [partner configuration](../partner/configuration.md).
 Paste following line right after the `homewise` object. This loads the widget embed script.
 
 ```html
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.16/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
 ```
 
 #### Example
@@ -27,17 +27,16 @@ Paste following line right after the `homewise` object. This loads the widget em
     }
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.16/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
 ```
 
 #### Versions
 Homewise will release versions with new features and bug fixes. We recommend that you use the latest 
-version of embed script by changing the version number (e.g `/1.16/embed.js`). Following table shows available versions.
+version of embed script by changing the version number (e.g `/1.15/embed.js`). Following table shows available versions.
 
 |             Version             | Notes                                                                    |
 |:-------------------------------:|--------------------------------------------------------------------------|
-|              1.16               | `productName` configuration parameter added.                             |
-| [1.15](./archive/embed_1.15.md) | `accreditation` configuration parameter added.                           |
+|              1.15               | `accreditation` configuration parameter added.                           |
 | [1.14](./archive/embed_1.14.md) | `linkParameters` and `linkFragments` added to enrich `link` param.       |
 | [1.10](./archive/embed_1.10.md) | Updated `featureCount`. New click events and `style` options. Bug fixes. |
 |  [1.9](./archive/embed_1.9.md)  | New `lenderName` filter added.                                           |
@@ -91,9 +90,7 @@ configurations to the `homewise` default object.
         featureCount: <number>,
         hide: [<string>],
         lenderName: [<string>],
-        style: <string>,
-        accreditation: <string>,
-        productName: <string>,                                              
+        style: <string>                                      
       }
     ]
   };
@@ -126,7 +123,6 @@ configurations to the `homewise` default object.
 | `lenderName`     |    N     | `[<string>]`                                                           | `[]`                           | 1.9+    |
 | `style`          |    N     | `table`, `card`                                                        | `table`                        | 1.10+   |
 | `accreditation`  |    N     | `true`,`false`                                                         | `true`                         | 1.15+   |
-| `productName`    |    N     | `true`,`false`                                                         | `true`                         | 1.16+   |
 
 > [!TIP]
 > Configure product table array with empty objects to render product tables(s) using default values. E.g. `homewise.productTable = [{},{},{}]`
@@ -175,10 +171,6 @@ configurations to the `homewise` default object.
 * `lenderName` - Provide a list of lender codes to filter the results by. Your Homewise contact will provide this list to you.
 * `style` - How to render the layout. Supports HTML table style or a modern card layout.
 * `accreditation` - Show or hide accreditation to Homewise (=logo) per search result.
-* `productName` - Show or hide the associated product name. 
-  * :warning: There may be multiple products from the same lender with identical rates. Displaying the product name 
-    helps users distinguish between them and choose the one that best suits their needs. Keep this in mind if you 
-    consider hiding the product name.
 
 #### Example
 ```html
@@ -210,9 +202,7 @@ configurations to the `homewise` default object.
         lenderType: "credit_union",
         creditScore: "any",
         featureCount: 2,
-        hide: ["lenderType", "term", "creditScore"],
-        accreditation: false,
-        productName: true
+        hide: ["lenderType", "term", "creditScore"]
       },
       {
         bg: "#fff7ed",
@@ -236,13 +226,11 @@ configurations to the `homewise` default object.
         hide: ["lenderType"],
         lenderName: ["rfa","td"],
         style: "card"
-        accreditation: true,
-        productName: false
       }
     ]
   };
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.16/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
 ```
 
 ### Step 5 - Optional
@@ -258,7 +246,7 @@ Call your custom functions (e.g. web analytics, product analytics) by listening 
 <script>
   var homewise = {...};
 </script>
-<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.16/embed.js"></script>
+<script src="https://widgets.thinkhomewise.com/lib/com-product-table/1.15/embed.js"></script>
 <script>
   window.addEventListener("hw_product_table_search_click", (e) => {
     console.log(e.detail);
